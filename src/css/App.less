@@ -1,0 +1,238 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #444;
+  color: #d6d2c4;
+}
+
+#root {
+  height: 100%
+}
+
+.App {
+  //text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #d6d2c4;
+
+  .header {
+    position: fixed;
+    width: 100%;
+    height: 6em;
+    background-color: white;
+    background-image: url('//cdn.ucl.ac.uk/indigo/images/ucl-logo.svg');
+    background-size: cover;
+    background-position: 100% 100%;
+    z-index: 1;
+    //
+    // Burger menu custom styles
+    //
+    .bm-burger-button {
+      position: fixed;
+      width: 36px;
+      height: 30px;
+      left: 36px;
+      top: 36px;
+    }
+
+    .right .bm-burger-button {
+      left: initial;
+      right: 36px;
+    }
+
+    .bm-burger-bars {
+      background: #373a47;
+    }
+
+    .bm-morph-shape {
+      fill: #373a47;
+    }
+
+    .bm-menu {
+      background: #373a47;
+
+      a {
+        color: #b8b7ad;
+
+        &:hover,
+        &:focus {
+          color: #c94e50;
+        }
+      }
+    }
+
+    .bm-item-list a {
+      padding: 0.8em;
+
+      span {
+        margin-left: 10px;
+        font-weight: 700;
+      }
+    }
+
+    .menu {
+      .bm-cross {
+        background: #888;
+      }
+
+      h2 {
+        margin: 0 auto;
+        padding: 2em 1em;
+        color: #b8b7ad;
+        box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+
+        i {
+          margin-left: 0.2em;
+        }
+
+        span {
+          font-size: 1.6em;
+          font-weight: 700;
+        }
+      }
+
+      a {
+        padding: 1em;
+        text-transform: uppercase;
+        transition: background 0.3s, box-shadow 0.3s;
+        box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+
+        span {
+          letter-spacing: 1px;
+          font-weight: 400;
+        }
+
+        &:hover,
+        &:focus {
+          background: rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
+          color: #b8b7ad;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding-top: 6em !important;
+    padding: 3em 2em;
+    position: relative;
+    background: #d6d2c4;
+
+    p {
+      color: #4e4a46;
+    }
+    a {
+      color: #4e4a46;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: #c94e50;
+      }
+    }
+
+    main {
+      padding: 3em 2em;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 800;
+      font-size: 3.75em;
+    }
+
+    .description {
+      max-width: 20em;
+      margin: 1.2em auto 1em;
+      line-height: 1.3em;
+      font-weight: 400;
+    }
+
+    .demo-buttons {
+      font-size: 1em;
+      max-width: 1200px;
+      margin: 2em auto 3em;
+      padding: 0 10em;
+
+      a {
+        display: inline-block;
+        margin: 0.75em;
+        padding: 1.35em 1.1em;
+        width: 15em;
+        background: #fffce1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 800;
+        border-top-left-radius: 20px 50px;
+        border-top-right-radius: 20px 50px;
+        border-bottom-right-radius: 20px 50px;
+        border-bottom-left-radius: 20px 50px;
+        cursor: pointer;
+
+        &.current-demo {
+          background: #c94e50;
+          color: #fffce1;
+        }
+      }
+    }
+
+    .side-button {
+      display: inline-block;
+      width: 5em;
+      height: 2.5em;
+      line-height: 2.5em;
+      cursor: pointer;
+      background: #fffce1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8em;
+      font-weight: 800;
+
+      &.left {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &.right {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      &.active {
+        background: #c94e50;
+        color: #fffce1;
+      }
+    }
+
+    @media screen and (max-width: 40em) {
+      main {
+        font-size: 80%;
+      }
+
+      h1 {
+        padding-top: 1em;
+        font-size: 2.5em;
+      }
+
+      .demo-buttons {
+        max-width: 900px;
+        padding: 0 2em;
+      }
+    }
+
+  }
+}
+
+
+
+
