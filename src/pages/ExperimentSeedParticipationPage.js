@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Input, Row, Col, Button, message, Modal} from 'antd';
-import InviteFriendsPage from './InviteFriendsPage.js';
+import {Input, Button, message} from 'antd';
 import * as CONSTANTS from '../constants.js'
+import InfoTermsAndConditionPage from './InfoTermsAndConditionPage.js'
 
-class ParticipationPage extends Component {
+class ExperimentSeedParticipationPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +18,7 @@ class ParticipationPage extends Component {
     };
 
     submit = () => {
-        fetch(`${CONSTANTS.BACKEND_URL}/verify/${this.state.data}`,
+        fetch(`${CONSTANTS.BACKEND_URL}/verify/seed/${CONSTANTS.SEED_ID}/${CONSTANTS.SEED_SECRET}/${this.state.data}`,
             {
                 method: 'get',
             }
@@ -47,21 +47,19 @@ class ParticipationPage extends Component {
 
     render() {
         return (
-            <main id="page-wrap">
-                <h1>Participate!</h1>
-                <Row style={{marginTop: '20%'}}>
-                    <Col span={4}></Col>
-                    <Col span={10}>
-                        <Input type="email" onChange={this.changeInput} placeholder="Enter your email address"/>
-                    </Col>
-                    <Col span={1}></Col>
-                    <Col span={4}>
-                        <Button type="primary" onClick={this.submit}>Submit</Button>
-                    </Col>
-                </Row>
-            </main>
+            <div id="page-wrap">
+                <h1>You are a seed node!</h1>
+                <Input type="email" onChange={this.changeInput} placeholder="Enter your email address here"/>
+                <Button type="primary" onClick={this.submit}>Validate your email</Button>
+                <br/>
+                <br/>
+                <p><b>Note that by clicking submit, you are agreeing to the following terms and conditions:</b></p>
+                <div class="termsandconditions">
+                    <InfoTermsAndConditionPage></InfoTermsAndConditionPage>
+                </div>
+            </div>
         );
     }
 }
 
-export default ParticipationPage;
+export default ExperimentSeedParticipationPage;

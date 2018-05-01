@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class ProjectPage extends Component {
+class InfoProjectPage extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -9,6 +9,7 @@ class ProjectPage extends Component {
     render() {
         return (
             <div>
+
                 <h1>Hybrid information diffusion in society</h1>
 
                 <h2>About this project</h2>
@@ -39,25 +40,27 @@ class ProjectPage extends Component {
                     spreading mechanisms to produce extremely infectious and persistent epidemics. This theory explained
                     the massive <a href="https://arxiv.org/abs/1406.6046">outbreak of Internet worm Conficker</a> and
                     led to <a href="https://arxiv.org/abs/1503.08992">the first mathematical model that reproduces the
-                        full course of HIV infection in human body</a>. Dr. Zhou also studies hybrid information
+                    full course of HIV infection in human body</a>. Dr. Zhou also studies hybrid information
                     diffusion in society and cyberspace, and new strategies to assist/control hybrid spreading.
                 </p>
 
                 <h2>Our research plan</h2>
 
+                <p>
+                    We will firstly do our research on Twitter. After we have analysed the results, we will do a few
+                    experiments in the real world, and try to workout how information spreads using email.
+                </p>
 
                 <h2>Contacts</h2>
-
-                <ul>
-                    <li>Liyi Zhou: liyi.zhou.17@ucl.ac.uk</li>
-                    <li>Dr Shi Zhou (Supervisor) @ucl</li>
-                </ul>
-
-                <br/>
-
+                <p>
+                    <ul>
+                        <li>Liyi Zhou: liyi.zhou.17@ucl.ac.uk</li>
+                        <li>Dr Shi Zhou (Supervisor) @ucl</li>
+                    </ul>
+                </p>
             </div>
         );
     }
 }
 
-export default ProjectPage;
+export default InfoProjectPage;

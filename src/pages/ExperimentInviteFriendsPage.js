@@ -150,5 +150,5 @@ class DynamicFieldSet extends Component {
     }
 }
 
-const InviteFriendsPage = Form.create()(DynamicFieldSet);
-export default InviteFriendsPage;
+const ExperimentInviteFriendsPage = Form.create()(DynamicFieldSet);
+export default ExperimentInviteFriendsPage;
